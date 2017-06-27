@@ -8,7 +8,15 @@
     <script type="text/javascript" src="build/js/app.js"></script>
   </head>
   <body>
-    
+    <div class ="container">
+      <h3 id="timeNow"></h3>
+      <form class="alarm" action="index.html" method="post">
+        <label for="alarm">Set a time for the alarm</label>
+        <input type="time" name="alarm" id="setTime">
+        <button type="submit" name="button">Submit!</button>
+      </form>
+      <img id="image" src="/alarmImage">
+    </div>
   </body>
 
 </html>
