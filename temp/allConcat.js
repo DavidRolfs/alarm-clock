@@ -8,24 +8,15 @@ $(document).ready(function(){
     event.preventDefault();
     var setTime = $("#setTime").val();
     // var setTimeMoment = moment(setTime).format('LT');
-    var currentTime = moment().format('HH:mm');
+    var time = setInterval(function(){
+      var currentTime = moment().format('HH:mm');}, 1000
+    );
     console.log(setTime);
-    console.log(currentTime);
+    console.log(time);
     var alarmClock = new Clock();
-    alarmClock.Alarm(setTime, currentTime, displayImage);
+    alarmClock.Alarm(setTime, time, displayImage);
 
   });
 });
 
-$(document).ready(function(){
-  var timeNow = moment().format('LTS');
-  $("#timeNow").text(timeNow);
-  var displayTime = function(){
-    $("#timeNow");
-  };
-  setInterval(displayTime, 1000);
 
-
-
-  setInterval(console.log(timeNow), 1000);
-});
